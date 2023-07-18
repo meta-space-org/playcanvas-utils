@@ -1,5 +1,6 @@
 // Modify pc.EventHandler so it returns an object with `off` method for easier events detachment.
 // If events chaning were ever used in the project, this will be conflicting change.
+// Tested with 1.64
 
 pc.EventHandler.prototype._addCallback = function (name, callback, scope, once = false) {
     if (!name || typeof name !== 'string' || !callback)
